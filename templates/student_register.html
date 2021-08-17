@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>Register</title>
+		<link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+		<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.1/css/all.css">
+	</head>
+	<body>
+		<div class="student_register">
+			<h1>Register</h1>
+			<div class="links">
+				<a href="{{ url_for('student_login') }}">Login</a>
+				<a href="{{ url_for('student_register') }}" class="active">Register</a>
+			</div>
+			<form action="{{ url_for('student_register') }}" method="post" autocomplete="off">
+				<label for="USN">
+					<i class="fas fa-user"></i>
+				</label>
+				USN:<input type="text" name="USN" placeholder="USN" required>
+				<br><br/>
+                <label for="student_name">
+					<i class="fas fa-lock"></i>
+				</label>
+				NAME:<input type="text" name="student_name" placeholder="Student_name" required>
+				<br><br/>
+                <label for="branch">
+					<i class="fas fa-lock"></i>
+				</label>
+				BRANCH:<input type="text" name="branch" placeholder="BRANCH" required>
+                <label for="semester">
+					<i class="fas fa-lock"></i>
+				</label>
+				SEMESTER:<input type="number" name="semester" placeholder="sem" required>
+				
+                <label for="student_password">
+					<i class="fas fa-lock"></i>
+				</label>
+				PASSWORD:<input type="password" name="student_password" placeholder="Password" required>
+				<label for="student_email">
+					<i class="fas fa-envelope"></i>
+				</label>
+				EMAIL:<input type="email" name="student_email" placeholder="Email" required>
+				<div class="msg">{{ msg }}</div>
+				<input type="submit" value="Register">
+			</form>
+		</div>
+	</body>
+</html>

@@ -1,0 +1,40 @@
+{
+	"folders": [
+		{
+			"path": ".."
+		},
+		{
+			"path": "..\\..\\..\\..\\Downloads\\student_S\\student\\scss"
+		},
+		{
+			"path": "..\\..\\..\\..\\Downloads\\student_S\\student\\vendor"
+		},
+		{
+			"path": "..\\..\\..\\..\\Downloads\\student_S\\student\\css"
+		},
+		{
+			"path": "..\\..\\..\\..\\Downloads\\student_S\\student\\img"
+		},
+		{
+			"path": "..\\..\\..\\..\\Downloads\\student_S\\student\\js"
+		}
+	],
+	"settings": {
+		"sqltools.connections": [
+			{
+				"mysqlOptions": {
+					"authProtocol": "default"
+				},
+				"previewLimit": 50,
+				"server": "localhost",
+				"port": 3306,
+				"driver": "MySQL",
+				"name": "Local instance MySQL80",
+				"database": "online_course_ms",
+				"username": "root",
+				"password": "vishal29",
+				"connectionTimeout": 60
+			}
+		]
+	}
+}

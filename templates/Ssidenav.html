@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="{{ url_for('static', filename='S_style (2).css') }}">
+
+	<script src="https://cdn.jsdelivr.net/gh/cferdinandi/smooth-scroll/dist/smooth-scroll.polyfills.min.js">
+
+    </script>
+    
+</head>
+
+<body>
+
+
+
+
+    <nav id="sideNav">
+        <ul>
+            <li><a href="#header">HOME</a></li>
+            <li><a href="#services">SERVICES</a></li>
+            <li><a href="#about">ABOUT US</a></li>
+            <li><a href="#contact">LOG IN / SIGN UP</a></li>
+            <li><a href="#join">JOIN US</a></li>
+        </ul>
+    </nav>
+    <img src="templates\navbtn2.jpg" id="menuBtn">
+
+
+
+
+    <script>
+        var menuBtn = document.getElementById("menuBtn");
+        var sideNav = document.getElementById("sideNav");
+
+        sideNav.style.left = "-250px";
+        menuBtn.onclick = function(){
+            if(sideNav.style.left == "-250px"){
+                sideNav.style.left = "0";
+            }
+            else{
+                sideNav.style.left = "-250px";
+            }
+        }
+
+        var scroll = new SmoothScroll('a[href*="#"]',{
+            speed: 1000,
+            speedAsDuration: true
+        });
+
+
+
+    </script>
+
+
+</body>
+</html>

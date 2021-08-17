@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>Add Course</title>
+                <link rel="stylesheet" href="{{ url_for('static', filename='login.css') }}">
+	</head>
+	<body background="https://www.connectinternetsolutions.com/wp-content/uploads/2016/02/12-Courses-for-Starting-Your-Web-Development-Journey.jpg">
+<div class="hero">
+		<div class="form-box1">	
+			<br>
+			<h2 style="text-align:center;">Add Course</h2>
+		<div class="add">
+			<form action="{{ url_for('add') }}" class="input-group" method="post" autocomplete="off">
+				<label for="domain_id">
+					<i class="fas fa-user"></i>
+				</label>
+				<input type="number" name="domain_id" class="input-field" placeholder="Domain ID" required>
+				<input type="text" name= "course_name" class="input-field" placeholder="Course name" required>
+				<div class="msg">{{ msg }}</div>
+				<input type="submit" value="Enter" class="submit-btn" style="font-size:18px;color:#bbb">
+                                <br>
+				<div class="links">
+                                    <a href="{{ url_for('home') }}" class="active"><button type="button" class="submit-btn" style="font-size:18px;color:rgb(82, 40, 121)">Go back</button></a>
+                                </div>
+                
+                       </form>
+		</div>
+                </div>
+</div>
+	</body>
+</html>

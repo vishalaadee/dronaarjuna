@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+	<meta charset="utf-8">
+	<title>OPTIONS : </title>
+	<link rel="stylesheet" href="{{ url_for('static', filename='login.css') }}">
+	<style id="applicationStylesheet" type="text/css">
+		.mediaViewInfo {
+			--web-view-name: Web 1920 – 1;
+			--web-view-id: Web_1920__1;
+			--web-scale-on-resize: true;
+			--web-enable-deep-linking: true;
+		}
+		:root {
+			--web-view-ids: Web_1920__1;
+		}
+		* {
+			margin: 0.5%;
+			padding: 0% ;
+			box-sizing: border-box;
+			border: none;
+		}
+	</style>
+	</head>
+	
+<body background="https://images.pexels.com/photos/62693/pexels-photo-62693.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500">  
+<div class="hero">
+		<div class="form-box1">	
+			<br><br>
+			<h2 style="text-align:center;">Options :</h2>
+<div>
+<br><br><br><br>
+<a href="{{url_for('scout')}}"><button type="button" class="submit-btn" style="font-size:18px;color:rgb(255, 154, 59)">Scout Students</button></a><br>
+<a href="{{url_for('Evaluate')}}"><button type="button" class="submit-btn" style="font-size:18px;color:rgb(235, 152, 28)">Evaluate Students</button></a><br>
+<a href="{{url_for('instructor_login')}}"><button type="button" class="submit-btn" style="font-size:18px;color:rgb(9, 196, 118)">Logout</button></a><br>
+
+</div></div></div>
+</body>
+</html>

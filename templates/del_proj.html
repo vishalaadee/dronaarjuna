@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>Delete Project</title>
+		<link rel="stylesheet" href="{{ url_for('static', filename='login.css') }}">
+<style>
+.input-group3 {
+  top: 100px;
+  padding-left: 20%;
+  bottom : 10px;
+  position: absolute;
+  width: 260px;
+  transition: 0.5s;
+}
+</style>
+	</head>
+	<body background="https://www.connectinternetsolutions.com/wp-content/uploads/2016/02/12-Courses-for-Starting-Your-Web-Development-Journey.jpg">
+<div class="hero">
+		<div class="form-box1">	
+			<br><br>
+			<h2 style="text-align:center;">Search Project ID</h2>		
+	<div class="delete_project">
+			<form action="{{ url_for('delete_project') }}" class="input-group3" method="post" autocomplete="off">		
+                <br>
+		<input type="number" class="input-field" name="project_id" placeholder="Project ID" required><br><br>
+		<input type="submit" value="Enter" class="submit-btn" style="font-size:18px;color:#bbb"><br>
+                <div class="links">
+                    <a href="{{ url_for('Evaluate') }}" class="active"><button type="button" class="submit-btn" style="font-size:18px;color:rgb(82, 40, 121)">Back</button></a>
+                </div><br>
+                 <div class="msg">{{ msg }}</div>
+            </form>
+		</div></div></div>
+	</body>
+</html>

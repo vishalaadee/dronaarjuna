@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="{{ url_for('static', filename='login.css') }}">
+<title>Student Login</title>
+<style id="applicationStylesheet" type="text/css">
+	.mediaViewInfo {
+		--web-view-name: Web 1920 – 1;
+		--web-view-id: Web_1920__1;
+		--web-scale-on-resize: true;
+		--web-enable-deep-linking: true;
+	}
+	:root {
+		--web-view-ids: Web_1920__1;
+	}
+	* {
+		margin: 0;
+		padding: 0;
+		box-sizing: border-box;
+		border: none;
+	}
+</style>
+</head>
+<body background="https://www.connectinternetsolutions.com/wp-content/uploads/2016/02/12-Courses-for-Starting-Your-Web-Development-Journey.jpg">  
+<div id="Web_1920__1">
+	<div class="hero">
+		<div class="form-box1">	
+			<br><br>
+			<h2 style="text-align:center;">  Student Login </h2>	
+	<form id="login" class="input-group" action="{{ url_for('student_login') }}" method="post">
+		<label for="USN">
+			<i class="fas fa-user"></i>
+		</label>
+	    <input type="text" name= "USN" class="input-field" placeholder="USN" required><br>
+	    <label for="student_password">
+			<i class="fas fa-lock"></i>
+	    </label>
+		<input type="password" name="student_password" class="input-field" placeholder="Enter Password" required>
+		<div class="msg">{{ msg }}</div>
+		<br><br>
+		<input type="submit" value="Log In" class="submit-btn" style="font-size:20px;color:#bbb">
+		<h4 style="text-align:center;">
+			<div class="links"><br>
+				<a style="text-decoration: none;" href="{{url_for('student_register')}}"><button type="button" class="submit-btn" style="font-size:18px;color:#bbb">Register</button></a>
+			</br>
+			</div></h4>	
+                <div class="links"><br>
+                    <a href="{{url_for('index')}}"><button type="button" class="submit-btn" style="font-size:15px;color:rgb(219, 213, 215)">HOME PAGE</button></a>
+					</br></a>
+                </div>
+                
+                
+	</form>
+    </div>
+	</div>
+</div>
+</body>
+</html>

@@ -1,0 +1,73 @@
+<html>
+<head>
+<title>Evaluation</title>
+<style>
+.hero {
+  height: 100%;
+  width: 100%;
+  background-position: center;
+  background-size: cover;
+  position: relative;
+}
+.form-box1{
+  width: 1000px;
+  height: 500px;
+  position: relative;
+  margin: 6% auto;
+  background-color: rgba(189, 192, 185, 0.555);
+  padding: 10px;
+  overflow: scroll;
+}
+.content-table{
+margin: 25px 0;
+min-width: 400px;
+}
+.content-table thead tr{
+background-color: #009879;
+color: #ffffff;
+text-align: left;
+}
+.table_row{
+background-color: #ffffff
+}
+</style>
+</head>
+<body background="https://www.connectinternetsolutions.com/wp-content/uploads/2016/02/12-Courses-for-Starting-Your-Web-Development-Journey.jpg">
+<div class="hero">
+<div class="form-box1">
+<div class="add_marks">
+	    <div class="links">
+            <a href="{{ url_for('Instructor_ids') }}" class="active"><button type="button" class="submit-btn" style="font-size:18px;color:rgb(82, 40, 121)">View Instructor ID</button></a>
+        </div>
+        <div class="view_submission">
+            <a href="{{ url_for('view_submission') }}" class="active"><button type="button" class="submit-btn" style="font-size:18px;color:rgb(82, 40, 121)">View Submissions</button></a>
+        </div>
+        
+        <div class="Evaluate">
+			<h3>Evaluate Student: </h3>
+			<form action="{{ url_for('Evaluate') }}" method="post" autocomplete="off">
+				<label for="project_id">
+					<i class="fas fa-user"></i>
+                    <input type="number" name="project_id" placeholder="ENTER PROJECT ID" required>
+                </label>
+                <div></div>
+                EVALUATION 1:<input type="number" name="eval1" placeholder="enter marks">
+                <div></div>
+                EVALUATION 2:<input type="number" name="eval2" placeholder="enter marks" >
+                <div></div>
+                EVALUATION 3:<input type="number" name="eval3" placeholder="enter marks" >
+                <div class="msg">{{ msg }}</div>
+				<input type="submit" value="ENTER">
+                <h3>DELETE PROJECT:</h3>
+                <div class="links">
+                    <a href="{{ url_for('delete_project') }}" class="active"><button type="button" class="submit-btn" style="font-size:18px;color:rgb(82, 40, 121)">Delete</button></a>
+                </div>
+                <h3>GO BACK</h3>
+                <div class="links">
+                    <a href="{{ url_for('i_home') }}" class="active"><button type="button" class="submit-btn" style="font-size:18px;color:rgb(82, 40, 121)">Back</button></a>
+                </div>
+                
+            </form>
+		</div>
+	</body>
+</html>

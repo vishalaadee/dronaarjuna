@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Scout</title>
+<style>
+.hero {
+  height: 100%;
+  width: 100%;
+  background-position: center;
+  background-size: cover;
+  position: absolute;
+}
+.form-box1{
+  top: -22%;
+  width: 1000px;
+  height: 900px;
+  position: relative;
+  margin: 6% auto;
+  background-color: rgba(189, 192, 185, 0.555);
+  padding: 10px;
+  overflow: scroll;
+}
+.input-group {
+  top: 110px;
+  padding-left: 37%;
+  bottom : 100px;
+  position: absolute;
+  width: 260px;
+  transition: 0.5s;
+}
+.input-field {
+  width: 100%;
+  left: 25px;
+  padding: 12px 0;
+  margin: 15px 0;
+  border-left: 0;
+  border-top: 0;
+  border-right: 0;
+  border-bottom: 5px solid rgba(150, 55, 150, 0.712);
+  outline: none;
+  background: transparent;
+}
+.content-table{
+margin: 25px 0;
+min-width: 400px;
+}
+.content-table thead tr{
+background-color: #009879;
+color: #ffffff;
+text-align: left;
+}
+.table_row{
+background-color: #ffffff
+}
+.submit-btn {
+  width: 85%;
+  padding: 10px 30px;
+  cursor: pointer;
+  display: block;
+  margin: auto;
+  background: linear-gradient(to right, #3fc455, #8a395b9d);
+  border: 0;
+  outline: none;
+  border-radius: 5px;
+}
+.submit-btn:hover {
+  width: 85%;
+  padding: 10px 30px;
+  cursor: pointer;
+  display: block;
+  margin: auto;
+  background: linear-gradient(to right, #e76d48, #88a3fc);
+  border: 0;
+  outline: none;
+  border-radius: 5px;
+}
+</style>
+</head>
+	<body background="https://www.connectinternetsolutions.com/wp-content/uploads/2016/02/12-Courses-for-Starting-Your-Web-Development-Journey.jpg">
+<div class="hero">
+		<div class="form-box1">	
+			<br><br>
+			<h1 style="text-align:center;">Enter Domain ID</h1>		
+<div class="scout">
+		
+			<form action="{{ url_for('scout') }}" method="post" class="input-group">
+				<label for="domain_id">
+					<i class="fas fa-user"></i>
+				</label>
+				<input type="number" name="domain_id" class="input-field" placeholder="Domain ID" required>
+				<div class="msg">{{ msg }}</div>
+				<input type="submit" value="Submit" class="submit-btn" style="font-size:18px;color:#bbb"><br>
+                <div class="links">
+                    <a href="{{ url_for('Course_ids') }}" class="active"><button type="button" class="submit-btn" style="font-size:18px;color:rgb(82, 40, 121)">Course IDs</button></a><br>
+                </div>
+                <div class="links">
+                    <a href="{{ url_for('Domain_ids') }}" class="active"><button type="button" class="submit-btn" style="font-size:18px;color:rgb(82, 40, 121)">Domain IDS</button></a><br>
+                    <a href="{{url_for('add_student')}}"><button type="button" class="submit-btn" style="font-size:18px;color:rgb(82, 40, 121)">Add Students</button></a><br>
+                    <a href="{{ url_for('i_home') }}" class="active"><button type="button" class="submit-btn" style="font-size:18px;color:rgb(82, 40, 121)">Go back</button></a>
+                </div>                
+			</form>
+<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+<div>
+<br><br>
+<font size="4px"><b>USN and project ID with the requested Domain ID :</b></font>
+<table class="content-table"> 
+<thead>
+<tr>
+<th>USN
+<th>Project ID
+<th>Course ID
+</tr>
+</thead>
+<tbody>
+      {% for item in data %}
+        <tr class="table_row">
+            <td>{{item['USN']}}</td>
+            <td>{{item['project_id']}}</td>  
+            <td>{{item['course_id']}}</td>          
+        </tr>
+        {% endfor %} 
+    </tbody> 
+</table>  
+<table class="content-table"> 
+  <thead>
+  <tr>
+  <th>STUDENT NAME
+  <th>STUDENT EMAIL
+  </tr>
+  </thead>
+  <tbody>
+    {% for item in data1 %}
+    <tr class="table_row">
+        <td>{{item['student_name']}}</td>
+        <td>{{item['student_email']}}</td>  
+            
+    </tr>
+    {% endfor %}  
+      </tbody> 
+  </table>  
+  
+</div>
+		</div></div></div>
+	</body>
+</html>
+

@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+	<meta charset="utf-8">
+	<title>Project Manager</title>
+	<link rel="stylesheet" href="{{ url_for('static', filename='S_style (1).css') }}" >
+    <link rel="stylesheet"
+  href="https://use.fontawesome.com/releases/v5.8.2/css/all.css"
+  integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay"
+  crossorigin="anonymous">
+    <style>
+        .container{
+         background:"https://www.connectinternetsolutions.com/wp-content/uploads/2016/02/12-Courses-for-Starting-Your-Web-Development-Journey.jpg"
+        }
+    </style>
+</head>
+
+	<body>
+        <div class="containers">
+            <div class="navbar">
+                <h1>Online Course Management System</h1>
+                <nav>
+                    <ul>
+                    <li><a href="{{url_for('student_login')}}">Student Login</a></li>
+                    <li><a href="{{url_for('instructor_login')}}">Instructor Login</a></li>
+                    </ul>
+                </nav>
+
+            </div>
+
+            <div class="container">
+
+
+                <section class="row contents" style="float:left; margin: auto; width: 100%;">
+                    <div class="col-12 contents__content-one div-one" style="float: left;">
+                      <h4 class="contents__content-one--small-head">MOOC manager For
+                      Students</h4>
+                      <h2 class="contents__content-one--big-head">work on projects</h2>
+                      <p class="contents__content-one--text-body">Join other students, find mentors and work on your skills, and submit your projects.</p>
+                      <a href="{{url_for('student_register')}}" class="contents__content-one--btn">Sign up</a>
+                    </div>
+                    <div class="col-12 contents__content-two div-one" style="float: left;">
+                      <h4 class="contents__content-one--small-head">MOOC manager for Instructors</h4>
+                      <h2 class="contents__content-one--big-head">Scout Talent</h2>
+                      <p class="contents__content-one--text-body"> Identify a set of interested students to have a collaboration with, evaluate their project and know their potential.</p>
+                      <a href="{{url_for('instructor_register')}}" class="contents__content-one--btn">Sign up</a>
+                    </div>
+                </section>
+
+
+
+            </div>
+
+        </div>
+
+    </body>
+
+</html>

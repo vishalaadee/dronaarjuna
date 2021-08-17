@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>View My Students</title>
+<style>
+.hero {
+  height: 100%;
+  width: 100%;
+  top:-22%;
+  background-position: center;
+  background-size: cover;
+  position: absolute;
+}
+.form-box1{
+  width: 1000px;
+  height: 900px;
+  position: relative;
+  margin: 6% auto;
+  background-color: rgba(189, 192, 185, 0.555);
+  padding: 10px;
+  overflow: scroll;
+}
+.input-group {
+  top: -10%;
+  padding-left: 37%;
+  bottom : 100px;
+  position: sticky;
+  width: 260px;
+  transition: 0.5s;
+}
+.input-field {
+  width: 100%;
+  left: 25px;
+  padding: 12px 0;
+  margin: 15px 0;
+  border-left: 0;
+  border-top: 0;
+  border-right: 0;
+  border-bottom: 5px solid rgba(150, 55, 150, 0.712);
+  outline: none;
+  background: transparent;
+}
+.content-table{
+margin: 25px 0;
+min-width: 400px;
+}
+.content-table thead tr{
+background-color: #009879;
+color: #ffffff;
+text-align: left;
+}
+.table_row{
+background-color: #ffffff
+}
+.submit-btn {
+  width: 85%;
+  padding: 10px 30px;
+  cursor: pointer;
+  display: block;
+  margin: auto;
+  background: linear-gradient(to right, #3fc455, #8a395b9d);
+  border: 0;
+  outline: none;
+  border-radius: 5px;
+}
+.submit-btn:hover {
+  width: 85%;
+  padding: 10px 30px;
+  cursor: pointer;
+  display: block;
+  margin: auto;
+  background: linear-gradient(to right, #e76d48, #88a3fc);
+  border: 0;
+  outline: none;
+  border-radius: 5px;
+}
+</style>
+</head>
+	<body background="https://www.connectinternetsolutions.com/wp-content/uploads/2016/02/12-Courses-for-Starting-Your-Web-Development-Journey.jpg">
+<div class="hero">
+		<div class="form-box1">	
+			<br><br>
+			<h1 style="text-align:center;">My Students</h1>			
+<div class="view_submission">
+			<form action="{{ url_for('view_submission') }}" class="input-group" method="post">
+				<label for="instructor_id">
+					<i class="fas fa-user"></i>
+				</label>
+				<input type="number" name= "instructor_id" class="input-field" placeholder="Instructor ID" required><br>
+				<div class="msg">{{ msg }}</div>
+				<input type="submit" value="Submit" class="submit-btn" style="font-size:18px;color:#bbb"><br>
+                <div class="links">
+                    <a href="{{ url_for('Evaluate') }}" class="active"><button type="button" class="submit-btn" style="font-size:18px;color:rgb(82, 40, 121)">Evaluate</button></a>
+                </div>            
+			</form>
+<br><br><br><br><br><br><br><br><br><br><br>
+<div>
+<b>Details of Students associated with me :</b>
+<table class="content-table"> 
+<thead>
+<tr>
+<th>USN
+<th>Project ID
+<th>Project Link
+<th>Evaluation 1
+<th>Evaluation 2
+<th>Evaluation 3
+<th>Grade
+</tr>
+</thead>
+<tbody>
+        {% for item in data %}
+        <tr class="table_row">
+            <td>{{item['USN']}}</td>
+	    <td>{{item['project_id']}}</td>
+		
+	    <td><a href="{{item['project_link']}}" target="_blank">{{item['project_link']}}</a></td>
+
+		<td>{{item['eval1']}}</td>
+	    <td>{{item['eval2']}}</td>
+            <td>{{item['eval3']}}</td>   
+            <td>{{item['grade']}}</td>       
+        </tr>
+        {% endfor %} 
+    </tbody> 
+</table>
+</div> 
+		</div></div></div>
+	</body>
+</html>
+
+	

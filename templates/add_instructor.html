@@ -1,0 +1,61 @@
+<html>
+<head>
+<title>ADD STUDENTS</title>
+<style>
+.hero {
+  top: -10%;
+    height: 180%;
+  width: 100%;
+  background-position: center;
+  background-size: cover;
+  position: absolute;
+}
+.form-box1{
+  width: 1000px;
+  height: 700px;
+  position: relative;
+  margin: 6% auto;
+  background-color: rgba(189, 192, 185, 0.555);
+  padding: 10px;
+  overflow: scroll;
+}
+.content-table{
+margin: 25px 0;
+min-width: 400px;
+}
+.content-table thead tr{
+background-color: #009879;
+color: #ffffff;
+text-align: left;
+}
+.table_row{
+background-color: #ffffff
+}
+</style>
+</head>
+<body background="https://www.connectinternetsolutions.com/wp-content/uploads/2016/02/12-Courses-for-Starting-Your-Web-Development-Journey.jpg">
+<div class="hero">
+<div class="form-box1">
+<div class="add_student">
+	<h1>ADD STUDENTS</h1>
+	<form action="{{ url_for('add_student') }}" method="post">
+		<label for="project_id">
+            <i class="fas fa-user"></i>
+        </label>
+         <input type="number" name="project_id" placeholder="ENTER Project ID" required>
+        <label for="instructor_id">
+            <i class="fas fa-user"></i>
+        </label>
+        <input type="number" name="instructor_id" placeholder="ENTER instructor ID" required>
+        <div class="msg">{{ msg }}</div>
+		<input type="submit" value="submit">		
+<div class="links"><br>
+	<a href="{{url_for('Instructor_ids')}}"><button type="button" class="submit-btn" style="font-size:18px;color:rgba(184, 59, 97, 0.849)">Instructor Ids</button></a>
+</br>
+</div>
+<div class="links"><br>
+	<a href="{{url_for('i_home')}}"><button type="button" class="submit-btn" style="font-size:18px;color:rgba(184, 59, 97, 0.849)">HOME</button></a>
+</br>
+</div>  
+	</form>
+

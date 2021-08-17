@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>Submit link</title>
+		<link rel="stylesheet" href="{{ url_for('static', filename='login.css') }}">
+<style>
+.input-group3 {
+  top: 100px;
+  padding-left: 18%;
+  bottom : 10px;
+  position: absolute;
+  width: 260px;
+  transition: 0.5s;
+}
+</style>
+	</head>
+	<body background="https://www.connectinternetsolutions.com/wp-content/uploads/2016/02/12-Courses-for-Starting-Your-Web-Development-Journey.jpg">
+<div class="hero">
+		<div class="form-box1">	
+			<br><br>
+			<h2 style="text-align:center;">Search by project ID</h2>			
+<div class="Project_submit">
+			<form action="{{ url_for('Project_submit') }}" class="input-group3" method="post" autocomplete="off">
+				
+                <label for="project_id">
+					<i class="fas fa-user"></i>
+                    <input type="number" class="input-field" name="project_id" placeholder="Project ID" required>
+                </label>
+		    <input type="link" class="input-field" name="Project_link" placeholder="Project link" required>
+				<div class="msg">{{ msg }}</div>
+				<input type="submit" value="Enter" class="submit-btn" style="font-size:18px;color:#bbb"><br>
+				<div class="links">
+                    <a href="{{ url_for('project_ids') }}" class="active"><button type="button" class="submit-btn" style="font-size:18px;color:rgb(82, 40, 121)">View Marks</button></a><br>
+                    <a href="{{ url_for('home') }}" class="active"><button type="button" class="submit-btn" style="font-size:18px;color:rgb(82, 40, 121)">Go back</button></a>
+                </div>                
+            </form>
+		</div></div></div>
+	</body>
+</html>

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>Register</title>
+		<link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+		<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.1/css/all.css">
+	</head>
+	<body>
+		<div class="instructor_register">
+			<h1>Register</h1>
+			<div class="links">
+				<a href="{{ url_for('instructor_login') }}">Login</a>
+				<a href="{{ url_for('instructor_register') }}" class="active">Register</a>
+			</div>
+			<form action="{{ url_for('instructor_register') }}" method="post" autocomplete="off">
+				<label for="instructor_name">
+					<i class="fas fa-lock"></i>
+				</label>
+				NAME:<input type="text" name="instructor_name" placeholder="instructor name" required>
+				<br><br/>
+                <label for="Instructor_designation">
+					<i class="fas fa-lock"></i>
+				</label>
+				DESIGNATION:<input type="text" name="instructor_designation" placeholder="designation" required>
+                <label for="instructor_email">
+					<i class="fas fa-lock"></i>
+				</label>
+				EMAIL:<input type="email" name="instructor_email" placeholder="email" required>
+				
+                <label for="instructor_password">
+					<i class="fas fa-lock"></i>
+				</label>
+				PASSWORD:<input type="password" name="instructor_password" placeholder="Password" required>
+				<label for="username">
+					<i class="fas fa-user"></i>
+				</label>
+				USERNAME:<input type="text" name="username" placeholder="username" required>
+				<br><br/>
+                
+                <div class="msg">{{ msg }}</div>
+				<input type="submit" value="Register">
+			</form>
+		</div>
+	</body>
+</html>

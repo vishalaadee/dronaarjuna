@@ -1,0 +1,62 @@
+<html>
+<head>
+<title>Course IDs</title>
+<style>
+.hero {
+  height: 100%;
+  width: 100%;
+  background-position: center;
+  background-size: cover;
+  position: absolute;
+}
+.form-box1{
+  width: 1000px;
+  height: 500px;
+  position: relative;
+  margin: 6% auto;
+  background-color: rgba(189, 192, 185, 0.555);
+  padding: 10px;
+  overflow: scroll;
+}
+.content-table{
+border-collapse: collapse;
+margin: 25px 0;
+font-size: 0.9em;
+min-width: 400px;
+}
+.content-table thead tr{
+background-color: #009879;
+color: #ffffff;
+text-align: left;
+}
+
+</style>
+</head>
+<body background="https://www.connectinternetsolutions.com/wp-content/uploads/2016/02/12-Courses-for-Starting-Your-Web-Development-Journey.jpg">
+<div class="hero">
+<div class="form-box1">
+<font size="5px"><b>Course IDs and Names :</b></font> 
+<table class="content-table"> 
+<thead>
+<tr>
+<th>Course ID
+<th>Name
+<th>Domain ID
+</tr>
+</thead>
+<tbody>
+        {% for item in value %}
+        <tr>
+            <td>{{item['course_id']}}</td>
+            <td>{{item['course_name']}}</td>
+            <td>{{item['domain_id']}}</td>
+                      
+        </tr>
+        {% endfor %} 
+    </tbody> 
+</table>
+ 
+</div>
+</div>
+</body>
+</html>

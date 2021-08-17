@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+	<meta charset="utf-8">
+	<title>OPTIONS : </title>
+	<link rel="stylesheet" href="{{ url_for('static', filename='login.css') }}">
+	<style id="applicationStylesheet" type="text/css">
+		.mediaViewInfo {
+			--web-view-name: Web 1920 – 1;
+			--web-view-id: Web_1920__1;
+			--web-scale-on-resize: true;
+			--web-enable-deep-linking: true;
+		}
+		:root {
+			--web-view-ids: Web_1920__1;
+		}
+		* {
+			margin: 0.5%;
+			padding: 0% ;
+			box-sizing: border-box;
+			border: none;
+		}
+	</style>
+	</head>
+	
+<body background="https://images.pexels.com/photos/62693/pexels-photo-62693.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500">  
+	<h1><button type="button" class="submit-btn" style="font-size:38px;color:rgb(0, 0, 7)">USER OPTIONS</button></h1>		
+    <div class="links"><br>
+				<a href="{{url_for('course')}}"><button type="button" class="submit-btn" style="font-size:18px;color:rgb(35, 22, 92)">Courses</button></a>
+			</br>
+			</div>
+            <div class="links"><br>
+				<a href="{{url_for('add')}}"><button type="button" class="submit-btn" style="font-size:18px;color:rgb(20, 21, 82)">Add Courses</button></a>
+			</br>
+			</div>
+            
+            <div class="links"><br>
+				<a href="{{url_for('Domain_ids')}}"><button type="button" class="submit-btn" style="font-size:18px;color:rgb(32, 12, 80)">View Domain Ids</button></a>
+			</br>
+			</div>
+            <div class="links"><br>
+				<a href="{{url_for('project_ids')}}"><button type="button" class="submit-btn" style="font-size:18px;color:rgb(10, 8, 128)">My Projects</button></a>
+			</br>
+			</div>
+            <div class="links"><br>
+				<a href="{{url_for('Project_submit')}}"><button type="button" class="submit-btn" style="font-size:18px;color:rgb(33, 19, 95)">Submit Project</button></a>
+			</br>
+			</div>
+			<div class="links"><br>
+				<a href="{{url_for('student_login')}}"><button type="button" class="submit-btn" style="font-size:18px;color:rgb(41, 20, 97)">LogOut</button></a>
+			</br>
+			</div>
+			  
+</body>
+</html>

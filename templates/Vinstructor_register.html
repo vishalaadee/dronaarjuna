@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+	<meta charset="utf-8">
+	<title>Instructor Register</title>
+	<link rel="stylesheet" href="{{ url_for('static', filename='login.css') }}">
+	<style id="applicationStylesheet" type="text/css">
+		.mediaViewInfo {
+			--web-view-name: Web 1920 – 1;
+			--web-view-id: Web_1920__1;
+			--web-scale-on-resize: true;
+			--web-enable-deep-linking: true;
+		}
+		:root {
+			--web-view-ids: Web_1920__1;
+		}
+		* {
+			margin: 0;
+			padding: 0;
+			box-sizing: border-box;
+			border: none;
+		}
+	</style>
+	</head>
+	
+<body background="https://www.connectinternetsolutions.com/wp-content/uploads/2016/02/12-Courses-for-Starting-Your-Web-Development-Journey.jpg">  
+			<div class="form-box">
+				<div>
+					<h3 style="text-align:center;">Instructor Registration</h3>
+					<form id="login" class="input-group1" action="{{ url_for('instructor_register') }}" method="post" autocomplete="off">
+						ENTER:<label for="instructor_name">
+							<i class="fas fa-user"></i>
+						</label>
+						<input type="text" name="instructor_name" class="input-field1" placeholder="Name" required>
+						<br><br/>
+						ENTER:<label for="Instructor_designation">
+							<i class="fas fa-lock"></i>
+						</label>
+						<input type="text" name="instructor_designation" class="input-field1" placeholder="DESIGNATION" required>
+						<br><br/>
+						ENTER:<label for="instructor_email">
+							<i class="fas fa-lock"></i>
+						</label>
+						<input type="email" name="instructor_email" class="input-field1" placeholder="E-Mail" required>
+						<br><br/>
+						ENTER:<label for="instructor_password">
+							<i class="fas fa-lock"></i>
+						</label>
+						<input type="password" name="instructor_password" class="input-field1" placeholder="password" required>
+						<br><br/>
+						ENTER:<label for="username">
+							<i class="fas fa-lock"></i>
+						</label>
+						<input type="text" name="username" class="input-field1" placeholder="username" required>
+						<div class="msg">{{ msg }}</div>
+		<br><br>
+		<input type="submit" value="Register" class="submit-btn" style="font-size:18px;color:#bbb">
+		<h4 style="text-align:center;">
+			<div class="links"><br>
+				<a href="{{url_for('instructor_login')}}"><button type="button" class="submit-btn" style="font-size:18px;color:#bbb">LogIn</button></a>
+			</br>
+			</div></h4>	
+                <div class="links"><br>
+                    <a href="{{url_for('index')}}"><button type="button" class="submit-btn" style="font-size:18px;color:rgb(82, 40, 121)">HOME PAGE</button></a>
+					</br></a>
+                </div>
+            
+					</form>
+				</div>					
+		</div>
+			  
+</body>
+</html>
+			  
