@@ -35,6 +35,7 @@
 				"password": "vishal29",
 				"connectionTimeout": 60
 			}
-		]
+		],
+		"liveServer.settings.multiRootWorkspaceName": "flask2021"
 	}
 }

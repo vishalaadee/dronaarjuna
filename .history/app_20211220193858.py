@@ -10,7 +10,7 @@ app.secret_key = 'dbms'
 app.config['MYSQL_HOST']='localhost'
 app.config['MYSQL_USER']='root'
 app.config['MYSQL_PASSWORD']='vishal29'
-app.config['MYSQL_DB']='Online_Course'
+app.config['MYSQL_DB']='Online_Course_MS'
 
 mysql=MySQL(app)
 
