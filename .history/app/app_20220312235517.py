@@ -16,7 +16,7 @@ mysql=MySQL(app)
 
 @app.route('/')
 def index():
-    return render_template("templates/Sindex.html")
+    return render_template("templaSindex.html")
 
 
 @app.route('/student_login/',methods=['GET','POST'])
