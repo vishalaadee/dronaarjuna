@@ -1,4 +1,4 @@
-# dronaarjuna
+# Dronarjuna
 Dronarjuna is a website which can minimize the reachability gap between students and professors .
 This website aims at bringing great young minds closer to experienced and professional professors to collaborate together and work on exciting projects.
 I felt a need of making such platform because I had observed my peers shying away from asking professors to collaborate on some project . 
